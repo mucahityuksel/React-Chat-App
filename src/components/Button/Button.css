@@ -1,0 +1,20 @@
+.login{
+    min-width: 254px;
+    margin-top: 10px;
+    height: 30px;
+    background-color: #68B7FF;
+    border: none;
+    color: #FFFFFF;
+  }
+.send{
+    width: 50px;
+    background-color: #68B7FF; 
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #FFFFFF;;
+}
+.login-form{
+  text-align: center;
+  margin: 250px
+}
