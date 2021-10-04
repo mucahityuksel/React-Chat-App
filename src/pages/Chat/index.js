@@ -12,7 +12,7 @@ import { GrLogout} from 'react-icons/gr';
   let user = {};
 
   const {setSelectedUser} = useContext(UserContext);
-  //const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [loadUser,setLoadUser] = useState(data.users);
   
   let users = data["users"];
@@ -30,7 +30,8 @@ import { GrLogout} from 'react-icons/gr';
       username : user.username,
       messages : user.messages,
       image : img,
-    })   ;
+    });
+    
     //setLoading(true);  
   };
 
@@ -82,7 +83,7 @@ import { GrLogout} from 'react-icons/gr';
         </div>         
         <div className="right-side">          
           
-         <Messages></Messages>
+          <Messages></Messages>
           
         </div>            
     </div>
