@@ -12,7 +12,7 @@ import { GrLogout} from 'react-icons/gr';
   let user = {};
 
   const {setSelectedUser} = useContext(UserContext);
-  const [loading, setLoading] = useState(false);
+  //const [loading, setLoading] = useState(false);
   const [loadUser,setLoadUser] = useState(data.users);
   
   let users = data["users"];
