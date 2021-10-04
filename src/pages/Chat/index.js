@@ -10,18 +10,18 @@ import img from "../Chat/indir.png"
 import { GrLogout} from 'react-icons/gr';
 
  function Chat(){
-  let user = {}
+  let user = {};
 
   const {setSelectedUser} = useContext(UserContext);
-  const [loading, setLoading] = useState(false)
-  const [loadUser,setLoadUser] = useState(data.users)
+  const [loading, setLoading] = useState(false);
+  const [loadUser,setLoadUser] = useState(data.users);
   
-  let users = data["users"]
-  let history = useHistory()
+  let users = data["users"];
+  let history = useHistory();
   
  const showMessages = (e) => {
-    let id = e.currentTarget.dataset.id
-    user = loadUser[id]
+    let id = e.currentTarget.dataset.id;
+    user = loadUser[id];
     
     
     setSelectedUser({
@@ -31,30 +31,30 @@ import { GrLogout} from 'react-icons/gr';
       username : user.username,
       messages : user.messages,
       image : img,
-    })   
-    setLoading(true)  
-  }
+    })   ;
+    setLoading(true);  
+  };
 
   const searchUser = (e) => {
-    data.first_name = e.target.value
+    data.first_name = e.target.value;
     users.filter((item) => {
       if((e.target.value) === item.first_name.toLocaleLowerCase()){
-        setLoadUser([item])      
+        setLoadUser([item]);      
       }if(e.target.value === ""){
-        setLoadUser(users)
+        setLoadUser(users);
       }
-    })
-  }
+    });
+  };
 
   const logOut = () => {
     user = null;
-    setSelectedUser({})
-    localStorage.removeItem("username")
-    history.push({pathname : `/`})
-  }
-  const name = localStorage.getItem("username")
+    setSelectedUser({});
+    localStorage.removeItem("username");
+    history.push({pathname : `/`});
+  };
+  const name = localStorage.getItem("username");
 
-  if(name === "") history.push({pathname : `/`})
+  if(name === "") history.push({pathname : `/`});
 
   return (
       <>
